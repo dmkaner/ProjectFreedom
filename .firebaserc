@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "projectfreedom-38d93": {
+      "hosting": {
+        "NADDIES": [
+          "projectfreedom-38d93"
+        ]
+      }
+    }
+  }
+}

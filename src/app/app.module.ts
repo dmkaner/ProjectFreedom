@@ -9,6 +9,14 @@ import { CreationsPageComponent } from './creations-page/creations-page.componen
 import { ExcreationPageComponent } from './excreation-page/excreation-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { PostsploitPageComponent } from './postsploit-page/postsploit-page.component';
+import { ForumPageComponent } from './forum-page/forum-page.component';
+import { TutorialsPageComponent } from './tutorials-page/tutorials-page.component';
+
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +25,17 @@ import { PostsploitPageComponent } from './postsploit-page/postsploit-page.compo
     CreationsPageComponent,
     ExcreationPageComponent,
     AboutPageComponent,
-    PostsploitPageComponent
+    PostsploitPageComponent,
+    ForumPageComponent,
+    TutorialsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

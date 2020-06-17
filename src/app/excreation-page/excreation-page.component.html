@@ -77,6 +77,28 @@
 
     <br><br>
 
+
+    <h4 class="h1 mb-4">Request Product!</h4>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">Send us your email and we'll contact you within 24 hours</small>
+        </div>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Request</button>
+    </form>
+
+    <br><br><br><br>
+
+    <footer class="page-footer font-small pt-4">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> NADDIES</a>
+        </div>
+      <!-- Copyright -->
+
+    </footer>
     
 
 </div>
+
